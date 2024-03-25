@@ -45,6 +45,7 @@ void MaxHeap::setArr(int arr[], int length){
   for(int i = 0; i < length; i++){
     heap[i] = arr[i];
   }
+  size = length;
 }
 
 void MaxHeap::siftDown(int idx){
@@ -69,7 +70,7 @@ void MaxHeap::swap(int idx1, int idx2){
 }
 
 int MaxHeap::biggerChild(int idx){
-  if(idx * 2 > size - 4){return -1;}
+  if(idx * 2 > size - 2){return -1;}
   if(idx * 2 > size - 3){
     return idx * 2 + 1;
   }
